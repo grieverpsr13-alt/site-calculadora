@@ -1,35 +1,109 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Calculadora de Juros Compostos online para simular investimentos com aportes, inflação e IR.">
-  <title>Calculadora de Juros Compostos</title>
-  <!-- Cole aqui o script do Google AdSense/Analytics quando tiver -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora Profissional de Juros Compostos</title>
+
+  <!-- Google AdSense -->
+  <script data-ad-client="ca-pub-YOUR-CA-PUB" async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
   <style>
-    body { margin:0; font-family: Arial, sans-serif; }
-    header { background:#1F7A8C; color:#fff; padding: 1rem; text-align:center; }
-    main { max-width: 1100px; margin: 0 auto; padding: 1rem; }
-    .wrapper { position: relative; width: 100%; height: 80vh; min-height: 720px; }
-    .wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
-    .note { font-size: 0.9rem; color:#555; text-align:center; margin-top: 0.75rem; }
-    footer { text-align:center; padding:1rem; color:#555; }
-    @media (max-width: 600px) {
-      .wrapper { height: 85vh; min-height: 640px; }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 12px;
+      background-color: #f5f5f5;
+      text-align: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 24px;
+    }
+
+    .iframe-wrap {
+      flex: 1;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .ad-floating {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 300px;
+      max-width: 90%;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 18px;
+      }
+      .ad-floating {
+        width: 90%;
+        bottom: 5px;
+        right: 5%;
+        padding: 5px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>💰 Calculadora de Juros Compostos</header>
-  <main>
-    <div class="wrapper">
-      <!-- SUBSTITUA a URL abaixo pela URL pública do seu app no Streamlit Cloud -->
-      <iframe src="https://calculadora-juros-compostos-94fw6k2pi2msgpszhjtvnx.streamlit.app/" title="Calculadora de Juros Compostos"></iframe>
-    </div>
-    <p class="note">
-      Dica: adicione links de afiliados ou botões de produtos logo abaixo para monetizar esta página.
-    </p>
-  </main>
-  <footer>© Seu Nome — Todos os direitos reservados.</footer>
+
+  <header>
+    <h1>💰 Calculadora Profissional de Juros Compostos</h1>
+
+    <!-- AdSense unit principal -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-YOUR-CA-PUB"
+         data-ad-slot="YOUR-AD-SLOT"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </header>
+
+  <div class="iframe-wrap">
+    <iframe src="https://calculadora-juros-compostos-94fw6k2pi2msgpszhjtvnx.streamlit.app/" allowfullscreen></iframe>
+  </div>
+
+  <!-- Unidade de anúncio flutuante opcional -->
+  <div class="ad-floating">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-YOUR-CA-PUB"
+         data-ad-slot="YOUR-AD-SLOT-FLOAT"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
 </body>
 </html>
